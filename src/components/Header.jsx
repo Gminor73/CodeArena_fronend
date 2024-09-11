@@ -28,7 +28,7 @@ const Header = ({ isLoggedIn, username, access, logout }) => {
         <div className="container mx-auto px-4">
           <ul className="flex space-x-8 py-3">
             <li><a href="/" className="text-gray-700 font-semibold hover:text-black">HOME</a></li>
-            <li><a href="/problemset" className="text-gray-700 font-semibold hover:text-black">PROBLEMSET</a></li>
+            <li><button onClick={() => nav('/problemset')} className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">Problemset</button></li>
             <li><a href="/createblog" className="text-gray-700 font-semibold hover:text-black">CREATE BLOG</a></li>
             {access === "admin" && (
               <>
