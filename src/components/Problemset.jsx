@@ -81,7 +81,17 @@ const ProblemSet = () => {
                 <tr key={prob.title} className="border-t hover:bg-gray-50">
                   <td className="px-4 py-2 border border-gray-300">{index + 1}</td>
                   <td className="px-4 py-2 border border-gray-300">
-                    <a href={`/problem/${prob.title}`} className="text-blue-600 hover:underline">{prob.title}</a>
+                    {/* <a href={`/problem/${prob.title}`} className="text-blue-600 hover:underline">{prob.title}</a> */}
+                    <a onClick={(e) => {
+                      e.preventDefault();   
+                      nav(`/problem/${prob.title}`);  
+                      }
+                    }
+                    href="/"
+                    className="text-blue-600 hover:underline"
+                  >
+                    {prob.title}
+                  </a>
                   </td>
                   <td className="px-4 py-2 text-right border border-gray-300">{prob.rating}</td>
                 </tr>

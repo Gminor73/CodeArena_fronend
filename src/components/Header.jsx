@@ -27,12 +27,56 @@ const Header = ({ isLoggedIn, username, access, logout }) => {
       <nav className="bg-gray-200 shadow-sm">
         <div className="container mx-auto px-4">
           <ul className="flex space-x-8 py-3">
-            <li><a href="/" className="text-gray-700 font-semibold hover:text-black">HOME</a></li>
-            <li><button onClick={() => nav('/problemset')} className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">Problemset</button></li>
-            <li><a href="/createblog" className="text-gray-700 font-semibold hover:text-black">CREATE BLOG</a></li>
+            <li>
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault(); 
+                  nav('/');
+                }}
+                className="text-gray-700 font-semibold hover:text-black"
+              >
+                HOME
+              </a>
+            </li>
+            <li>
+              <a
+                href="/problemset"
+                onClick={(e) => {
+                  e.preventDefault();
+                  nav('/problemset');
+                }}
+                className="text-gray-700 font-semibold hover:text-black"
+              >
+                PROBLEMSET
+              </a>
+            </li>
+            <li>
+              <a
+                href="/createblog"
+                onClick={(e) => {
+                  e.preventDefault(); 
+                  nav('/createblog');
+                }}
+                className="text-gray-700 font-semibold hover:text-black"
+              >
+                CREATE BLOG
+              </a>
+            </li>
             {access === "admin" && (
               <>
-                <li><a href="/createproblem" className="text-gray-700 font-semibold hover:text-black">SET PROBLEM</a></li>
+                <li>
+                  <a
+                    href="/createproblem"
+                    onClick={(e) => {
+                      e.preventDefault(); 
+                      nav('/createproblem');
+                    }}
+                    className="text-gray-700 font-semibold hover:text-black"
+                  >
+                    SET PROBLEM
+                  </a>
+                </li>
               </>
             )}
           </ul>
