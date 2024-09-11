@@ -27,7 +27,7 @@ const Problem = () => {
     }
 
     try {
-      const response = await fetch(`https://codearena-backend.vercel.app${location.pathname}`, {
+      const response = await fetch(`http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com${location.pathname}`, {
         method: "GET",
         headers: {
           authorization: token,
@@ -67,7 +67,7 @@ const Problem = () => {
 
     try {
       console.log(code);
-      const response = await fetch('https://codearena-backend.vercel.app/testing', {
+      const response = await fetch('http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com/testing', {
         method: "POST",
         headers: {
           authorization: token,

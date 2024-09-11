@@ -14,7 +14,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('https://codearena-backend.vercel.app/register', {
+      const response = await fetch('http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com/register', {
         method: "POST",
         headers: {
           'Content-Type': "application/json",

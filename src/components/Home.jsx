@@ -10,7 +10,7 @@ const Home = () => {
   const nav = useNavigate();
 
   const getBlogs = async () => {
-    const response = await fetch('https://codearena-backend.vercel.app/blogs', {
+    const response = await fetch('http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com/blogs', {
       method: "GET",
     });
     const json = await response.json();
@@ -18,7 +18,7 @@ const Home = () => {
   }
 
   const getaccess = async () => {
-    const response = await fetch('https://codearena-backend.vercel.app/access', {
+    const response = await fetch('http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com/access', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

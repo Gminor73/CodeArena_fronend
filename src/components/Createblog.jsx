@@ -19,7 +19,7 @@ const CreateBlog = () => {
       setStatusMessage('Login Required!!');
       return;
     }
-    const response = await fetch('https://codearena-backend.vercel.app/createblog', {
+    const response = await fetch('http://ec2-65-1-3-37.ap-south-1.compute.amazonaws.com/createblog', {
       method: "POST",
       body: JSON.stringify({
         title,
